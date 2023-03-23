@@ -29,8 +29,8 @@ public class LuhnAlgorithmUtil {
     /**
      * 信用卡中间6位加密，生成新号码
      *
-     * @param cardNo 信用卡号
-     * @return 生成的新号码
+     * @param cardNo
+     * @return new credit card number
      */
     public static String getNewNum(String cardNo) {
         int nDigits = cardNo.length();
