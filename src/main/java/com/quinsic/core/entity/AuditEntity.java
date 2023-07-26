@@ -1,5 +1,9 @@
 package com.quinsic.core.entity;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.EntityListeners;
+import jakarta.persistence.MappedSuperclass;
+import jakarta.persistence.Version;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.CreatedBy;
@@ -8,10 +12,7 @@ import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-import javax.persistence.Column;
-import javax.persistence.EntityListeners;
-import javax.persistence.MappedSuperclass;
-import javax.persistence.Version;
+
 import java.io.Serializable;
 import java.util.Date;
 import java.util.UUID;
@@ -28,7 +29,7 @@ public class AuditEntity implements Serializable {
 
     @Column(name = "create_dt")
     @CreatedDate
-    protected Date createAt;
+    protected Date createDt;
 
     @Column(name = "created_by")
     @CreatedBy
@@ -36,7 +37,7 @@ public class AuditEntity implements Serializable {
 
     @Column(name = "update_dt")
     @LastModifiedDate
-    protected Date updateAt;
+    protected Date updateDt;
 
     @Column(name = "updated_by")
     @LastModifiedBy
